@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A searchable thin-line icon system for JavaScript, TypeScript, architecture, and agent-system concepts."
+    />
+    <title>JavaScript / TypeScript Visual Language</title>
+    <script type="module" src="/main.ts"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#catalog">Skip to the concept catalog</a>
+    <main class="shell">
+      <header class="topbar">
+        <a class="brand" href="#top" aria-label="Code Atlas, return to top">
+          <span class="brand-mark" id="brand-mark" aria-hidden="true"></span>
+          <span>Code Atlas</span>
+        </a>
+        <div class="topbar-actions">
+          <span class="version">visual language · v0.1.0</span>
+          <a href="https://github.com/CrimsonEarth/javascript-visual-language">GitHub</a>
+        </div>
+      </header>
+
+      <section class="hero" id="top">
+        <div>
+          <p class="eyebrow">JavaScript + TypeScript icon system</p>
+          <h1>A visual language for how code behaves.</h1>
+          <p class="hero-copy">
+            One thin-line family for primitives, types, control flow, architecture, and agent
+            systems. Related ideas share shapes, while easily confused ideas remain visibly
+            distinct.
+          </p>
+        </div>
+        <aside class="grammar" aria-labelledby="grammar-title">
+          <h2 id="grammar-title">The three-part grammar</h2>
+          <div class="grammar-row">
+            <span class="mini-glyph" id="grammar-container" aria-hidden="true"></span>
+            <div><strong>Container = thing</strong><span>box, document, braces, boundary</span></div>
+          </div>
+          <div class="grammar-row">
+            <span class="mini-glyph" id="grammar-motion" aria-hidden="true"></span>
+            <div><strong>Motion = behavior</strong><span>arrow, orbit, route, branching</span></div>
+          </div>
+          <div class="grammar-row">
+            <span class="mini-glyph" id="grammar-badge" aria-hidden="true"></span>
+            <div><strong>Badge = specialization</strong><span>gear, lock, clock, @, check</span></div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="principles" aria-labelledby="principles-title">
+        <div class="section-heading">
+          <p class="section-kicker">Composition rules</p>
+          <h2 id="principles-title">Build visual sentences, not pictograms.</h2>
+        </div>
+        <div class="principle-list">
+          <article><strong>One base</strong><span>Give each object one dominant silhouette.</span></article>
+          <article><strong>One modifier</strong><span>Add at most one state or specialization badge.</span></article>
+          <article><strong>Separate motion</strong><span>Use arrows and routes between objects, not inside a crowded glyph.</span></article>
+          <article><strong>Keep labels</strong><span>Icons support recognition; text owns precise meaning.</span></article>
+        </div>
+      </section>
+
+      <section id="catalog" aria-labelledby="catalog-title">
+        <div class="catalog-heading">
+          <div>
+            <p class="section-kicker">Concept matrix</p>
+            <h2 id="catalog-title">Browse the vocabulary</h2>
+          </div>
+          <output class="count" id="count" aria-live="polite"></output>
+        </div>
+
+        <div class="toolbar">
+          <div class="toolbar-inner">
+            <label class="search" for="search">
+              <span>Search concepts</span>
+              <input
+                id="search"
+                type="search"
+                autocomplete="off"
+                placeholder="Names, meanings, or visual cues"
+              />
+            </label>
+            <div class="filters" id="filters" role="group" aria-label="Filter by family"></div>
+          </div>
+        </div>
+
+        <div class="matrix" id="matrix"></div>
+        <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
+      </section>
+
+      <section class="notes" aria-label="Visual language guidance">
+        <article>
+          <h2>Original drawings</h2>
+          <p>
+            Every glyph is an original inline SVG on the same 24 by 24 grid. The library does
+            not inherit another icon pack's metaphors.
+          </p>
+        </article>
+        <article>
+          <h2>Reserved symbols</h2>
+          <p>
+            Keep a straight pipe for a linear pipeline. Use a person only for a human actor.
+            Treat a question mark as unknown or help, not data retrieval.
+          </p>
+        </article>
+        <article>
+          <h2>Drawing contract</h2>
+          <p>
+            Use rounded 1.35 to 1.5 pixel strokes, two pixels of optical padding, and lower-right
+            modifiers. The base must remain recognizable at 16 pixels.
+          </p>
+        </article>
+        <article>
+          <h2>Accessible by default</h2>
+          <p>
+            Keep visible labels in learning surfaces. Give standalone icons an accessible name;
+            mark icons beside equivalent text as decorative.
+          </p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
