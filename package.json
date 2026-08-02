@@ -96,7 +96,7 @@
     "tinypool": "^1.1.1",
     "tinyrainbow": "^2.0.0",
     "tinyspy": "^4.0.4",
-    "undici-types": "^7.18.2",
+    "undici-types": "^8.9.0",
     "vite-node": "^3.2.4",
     "why-is-node-running": "^2.3.0"
   },
