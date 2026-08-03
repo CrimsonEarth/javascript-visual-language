@@ -1,5 +1,27 @@
 import { access, readFile, readdir } from "node:fs/promises";
 
+const packageManifest = JSON.parse(await readFile("package.json", "utf8"));
+const runtimeDependencies = Object.keys(packageManifest.dependencies ?? {});
+if (runtimeDependencies.length > 0) {
+  throw new Error(
+    `This zero-runtime-dependency package unexpectedly declares: ${runtimeDependencies.join(", ")}.`,
+  );
+}
+
+const expectedDevelopmentDependencies = [
+  "@playwright/test",
+  "@types/node",
+  "typescript",
+  "vite",
+  "vitest",
+];
+const developmentDependencies = Object.keys(packageManifest.devDependencies ?? {}).sort();
+if (JSON.stringify(developmentDependencies) !== JSON.stringify(expectedDevelopmentDependencies)) {
+  throw new Error(
+    `Direct development dependencies require an intentional allowlist update: ${developmentDependencies.join(", ")}.`,
+  );
+}
+
 const library = await import("../dist/index.js");
 if (library.icons.length !== 74) {
   throw new Error(`Expected 74 compiled icons, received ${library.icons.length}.`);
